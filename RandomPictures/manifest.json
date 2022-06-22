@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "freshtab",
+    "version": "1.0.0",
+    "description": "Experience a beautiful photo from Unsplash every time you open a new tab.",
+    "icons": {
+      "48": "icons/48.png"
+    },
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["storage", "unlimitedStorage"],
+    "background": {
+      "scripts": ["js/background.js"],
+      "persistent": false
+    },
+    "minimum_chrome_version": "60"
+  }
