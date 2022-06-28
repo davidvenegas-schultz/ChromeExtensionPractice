@@ -1,11 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import fetchitLogo from '../images/fetchitLogo.png'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={fetchitLogo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
