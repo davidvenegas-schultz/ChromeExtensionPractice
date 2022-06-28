@@ -3,7 +3,7 @@
   "name": "FetchIT",
   "description": "The FetchIT Chrome Extension",
   "version": "0.1",
-  "browser_action": {
+  "action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"
   },
