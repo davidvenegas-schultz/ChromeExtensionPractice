@@ -1,4 +1,4 @@
-import fetchitLogo from '../images/fetchitLogo.png'
+import fetchitLogo from './images/fetchitLogo.png'
 
 function App() {
   return (
