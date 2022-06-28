@@ -1,24 +1,13 @@
-import fetchitLogo from './images/fetchitLogo.png'
+import { useState } from 'react'
+import Main from './components/Main'
 
 function App() {
+  const [search, setSearch] = useState([{id: 1, name: "ezVet"}, {id: 2, name: "ezVet2"}, {id: 3, name: "ezVet3"}])
+  const handleSearch = (e) => setSearch(e.target.value)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={fetchitLogo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Main search={search} handleSearch={handleSearch} />
+  )
 }
 
-export default App;
+export default App
