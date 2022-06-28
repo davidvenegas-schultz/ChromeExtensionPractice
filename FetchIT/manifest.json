@@ -3,8 +3,13 @@
     "name": "FetchIT",
     "description": "FetchIT Chrome Extension",
     "version": "1.0",
+    "options_page": "options.html",
+    "permissions": ["storage", "activeTab", "scripting"],
     "icons": {
-        "48": "logo.png"
+        "48": "/images/logo.png"
+    },
+    "background": {
+        "service_worker": "background.js"
     },
     "content_scripts": [
         {
@@ -12,5 +17,11 @@
             "js": ["content.js"],
             "run_at": "document_end"
         }
-    ]
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "/images/get_started48.jpg"
+          }
+      }
 }

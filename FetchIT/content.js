@@ -5,7 +5,7 @@ function mainFunction() {
     // document.getElementById('newtab7') && document.getElementById('newtab7').click()
     // console.log('Got \'em.')
     var scriptNode = document.createElement('script')
-    scriptNode.textContent = 'changeIframe ();'
+    scriptNode.textContent = 'changeIframe();'
     document.body.appendChild(scriptNode)
 }
 
