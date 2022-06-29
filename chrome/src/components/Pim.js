@@ -1,10 +1,18 @@
 import { useState } from 'react'
+import FullPim from './FullPim'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
 
 function Pim({key, name, open, setOpen}) {
   const [dropdown, setDropdown] = useState(false)
-  const handleClick = () => setDropdown(!dropdown)
-  const handleSelect = () => setOpen(!open)
+  const [localOpen, setLocalOpen] = useState(false)
+  const handleClick = () => {
+    setDropdown(!dropdown)
+    setLocalOpen(false)
+  }
+  const handleSelect = () => {
+    setOpen(!open)
+    setLocalOpen(!localOpen)
+  }
 
   return (
     <div className='pim-wrapper' key={key}>
@@ -15,11 +23,11 @@ function Pim({key, name, open, setOpen}) {
       }
       {dropdown ?
         <div className="pim-dropdown-wrapper">
-          {/* TRANSITION FUCNTIONALITY */}
           <button onClick={handleSelect}>Select</button>
           <button onClick={handleClick}>Cancel</button>
         </div>
       : null}
+      {localOpen ? <FullPim localOpen={localOpen} setLocalOpen={setLocalOpen} /> : null}
     </div>
   )
 }
